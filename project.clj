@@ -5,7 +5,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :main airline.data.flights
   :aot [airline.data.flights]
-  :dependencies [[org.clojure/clojure "1.7.0"]
+  :dependencies [[org.clojure/clojure "1.8.0"]
                  [clj-time "0.9.0"]
                  [clojure-csv/clojure-csv "2.0.1"]
                  [org.clojure/core.cache "0.6.4"]
