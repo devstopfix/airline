@@ -3,6 +3,24 @@
 A Clojure library that generates a realistic schedule of flight data
 from an airlines daily timetable.
 
+# Datasets
+
+This library requires local copies of datasets from [openflights.org](http://openflights.org/data.html).
+
+Create target folder:
+
+```bash
+sudo mkdir -p /usr/local/share/openflights.org
+sudo chown `whoami` /usr/local/share/openflights.org
+cd /usr/local/share/openflights.org
+```
+
+Download:
+```
+wget https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat
+```
+
+
 ## Input
 
 The program requires an Airlines schedule in CSV format,
