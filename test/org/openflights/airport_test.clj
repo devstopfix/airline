@@ -20,3 +20,19 @@
     (is (= 1046 (->> (airports)
                      (into [] only-european-iata-airports)
                      (count))))))
+
+(testing "Type conversions"
+  (deftest test-numeric-conversions
+    (let [lhr (first (filter #(= "LHR" (:iata %)) (convert (airports))))]
+      (is (= lhr {:iata "LHR",
+                  :dst "E",
+                  :offset 0.0,
+                  :name "Heathrow",
+                  :tz "Europe/London",
+                  :icao "EGLL",
+                  :city "London",
+                  :latitude 51.4775,
+                  :longitude -0.461389,
+                  :altitude_feet 83.0,
+                  :id "507",
+                  :country "United Kingdom"})))))
